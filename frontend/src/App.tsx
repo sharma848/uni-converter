@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Moon, Sun } from 'lucide-react';
 import { Button } from './components/ui/Button';
 import { LandingPage } from './pages/LandingPage';
@@ -129,7 +129,6 @@ const pngToPdfFaqSchema = {
 function AppContent() {
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [darkMode, setDarkMode] = useState(false);
-  const location = useLocation();
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
