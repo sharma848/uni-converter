@@ -8,7 +8,9 @@
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "prebuild": "npm run generate:sitemap",
     "build": "tsc && vite build",
+    "build:prod": "rm -rf dist && npm run generate:sitemap && tsc && vite build --mode production",
     "preview": "vite preview",
+    "preview:prod": "vite preview --mode production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {

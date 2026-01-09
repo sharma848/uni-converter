@@ -7,7 +7,10 @@
     "scripts": {
         "dev": "tsx watch src/server.ts",
         "build": "tsc",
-        "start": "node dist/server.js"
+        "build:prod": "rm -rf dist && tsc && npm run clean:build",
+        "clean:build": "rm -f dist/**/*.map",
+        "start": "node dist/server.js",
+        "start:prod": "NODE_ENV=production node dist/server.js"
     },
     "keywords": [],
     "author": "",
