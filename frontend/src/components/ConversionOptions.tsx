@@ -22,14 +22,15 @@ export function ConversionOptions({ conversionType, options, onChange }: Convers
           <>
             <div className="space-y-2">
               <Label htmlFor="pageSize">Page Size</Label>
-              <Select
+              <select
                 id="pageSize"
                 value={options.pageSize || 'A4'}
                 onChange={(e) => updateOption('pageSize', e.target.value)}
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 <option value="A4">A4</option>
                 <option value="letter">Letter</option>
-              </Select>
+              </select>
             </div>
             <div className="space-y-2">
               <Label htmlFor="quality">Quality</Label>
@@ -50,15 +51,16 @@ export function ConversionOptions({ conversionType, options, onChange }: Convers
           <>
             <div className="space-y-2">
               <Label htmlFor="format">Output Format</Label>
-              <Select
+              <select
                 id="format"
                 value={options.format || 'png'}
                 onChange={(e) => updateOption('format', e.target.value)}
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 <option value="png">PNG</option>
                 <option value="jpg">JPG</option>
                 <option value="jpeg">JPEG</option>
-              </Select>
+              </select>
             </div>
             <div className="space-y-2">
               <Label htmlFor="quality">Quality</Label>
@@ -90,15 +92,16 @@ export function ConversionOptions({ conversionType, options, onChange }: Convers
           <>
             <div className="space-y-2">
               <Label htmlFor="format">Output Format</Label>
-              <Select
+              <select
                 id="format"
                 value={options.format || 'png'}
                 onChange={(e) => updateOption('format', e.target.value)}
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
               >
                 <option value="png">PNG</option>
                 <option value="jpg">JPG</option>
                 <option value="webp">WEBP</option>
-              </Select>
+              </select>
             </div>
             <div className="space-y-2">
               <Label htmlFor="quality">Quality</Label>
@@ -176,15 +179,16 @@ export function ConversionOptions({ conversionType, options, onChange }: Convers
         return (
           <div className="space-y-2">
             <Label htmlFor="quality">Compression Quality</Label>
-            <Select
+            <select
               id="quality"
               value={options.quality || 'medium'}
               onChange={(e) => updateOption('quality', e.target.value)}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
             >
               <option value="low">Low (smaller file)</option>
               <option value="medium">Medium</option>
               <option value="high">High (better quality)</option>
-            </Select>
+            </select>
           </div>
         );
 
@@ -192,14 +196,15 @@ export function ConversionOptions({ conversionType, options, onChange }: Convers
         return (
           <div className="space-y-2">
             <Label htmlFor="outputType">Output Type</Label>
-            <Select
+            <select
               id="outputType"
               value={options.outputType || 'pdf'}
               onChange={(e) => updateOption('outputType', e.target.value)}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
             >
               <option value="pdf">PDF Document</option>
               <option value="image">Single Vertical Image</option>
-            </Select>
+            </select>
           </div>
         );
 

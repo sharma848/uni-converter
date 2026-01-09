@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { Upload, FileUp, Image as ImageIcon } from 'lucide-react';
+import { Upload, FileUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface UploadZoneProps {

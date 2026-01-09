@@ -20,7 +20,7 @@ export function ConversionOptions({ options, onChange }: ConversionOptionsProps)
           </Label>
           <Select
             value={options.pageSize || 'auto'}
-            onValueChange={(value) => onChange({ ...options, pageSize: value })}
+            onValueChange={(value: string) => onChange({ ...options, pageSize: value })}
           >
             <SelectTrigger id="page-size" className="w-full">
               <SelectValue />
@@ -39,7 +39,7 @@ export function ConversionOptions({ options, onChange }: ConversionOptionsProps)
           </Label>
           <Select
             value={options.orientation || 'auto'}
-            onValueChange={(value) => onChange({ ...options, orientation: value })}
+            onValueChange={(value: string) => onChange({ ...options, orientation: value })}
           >
             <SelectTrigger id="orientation" className="w-full">
               <SelectValue />
@@ -58,7 +58,7 @@ export function ConversionOptions({ options, onChange }: ConversionOptionsProps)
           </Label>
           <Select
             value={options.margin || 'none'}
-            onValueChange={(value) => onChange({ ...options, margin: value })}
+            onValueChange={(value: string) => onChange({ ...options, margin: value })}
           >
             <SelectTrigger id="margin" className="w-full">
               <SelectValue />

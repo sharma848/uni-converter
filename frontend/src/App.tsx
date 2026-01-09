@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { Moon, Sun } from 'lucide-react';
 import { Button } from './components/ui/Button';
@@ -136,7 +136,6 @@ function AppContent() {
     document.documentElement.classList.toggle('dark');
   };
 
-  const isImageToPdfPage = location.pathname === '/image-to-pdf';
 
   return (
     <div className="min-h-screen bg-background">

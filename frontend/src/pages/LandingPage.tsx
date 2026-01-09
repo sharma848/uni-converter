@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Loader } from '@/components/ui/Loader';
 import { FileText, Image, Merge, Scissors, Minimize2, Layers, ArrowRight } from 'lucide-react';
@@ -38,15 +37,15 @@ export function LandingPage({ onSelectType }: LandingPageProps) {
   const categories = [
     {
       title: 'Image Conversions',
-      types: data?.converters.filter(c => c.type.includes('image') && !c.type.includes('combine')) || [],
+      types: data?.converters.filter((c: ConversionType) => c.type.includes('image') && !c.type.includes('combine')) || [],
     },
     {
       title: 'PDF Operations',
-      types: data?.converters.filter(c => c.type.includes('pdf') && !c.type.includes('image')) || [],
+      types: data?.converters.filter((c: ConversionType) => c.type.includes('pdf') && !c.type.includes('image')) || [],
     },
     {
       title: 'Multi-file Operations',
-      types: data?.converters.filter(c => c.type.includes('merge') || c.type.includes('combine') || c.type.includes('split')) || [],
+      types: data?.converters.filter((c: ConversionType) => c.type.includes('merge') || c.type.includes('combine') || c.type.includes('split')) || [],
     },
   ];
 

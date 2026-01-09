@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { Upload, File, X, FileUp } from 'lucide-react';
+import { Upload, FileUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { formatFileSize } from '@/lib/utils';
 

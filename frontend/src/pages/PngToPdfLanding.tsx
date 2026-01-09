@@ -120,7 +120,7 @@ export function PngToPdfLanding() {
                   <FileList 
                     files={files} 
                     onRemove={handleRemoveFile}
-                    onReorder={(from, to) => {
+                    onReorder={(from: number, to: number) => {
                       setFiles((prev) => {
                         const newFiles = [...prev];
                         const [moved] = newFiles.splice(from, 1);
