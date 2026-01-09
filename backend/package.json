@@ -9,7 +9,7 @@
         "build": "tsc",
         "build:prod": "rm -rf dist && tsc && npm run clean:build",
         "clean:build": "rm -f dist/**/*.map",
-        "start": "node dist/server.js",
+        "start:backend": "node dist/server.js",
         "start:prod": "NODE_ENV=production node dist/server.js"
     },
     "keywords": [],
