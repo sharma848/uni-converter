@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { fileRouter } from './routes/fileRoutes.js';
 import { conversionRouter } from './routes/conversionRoutes.js';
+import { healthRouter } from './routes/healthRoutes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -32,10 +33,7 @@ app.use('/outputs', express.static(path.join(__dirname, '../outputs'), {
 
 app.use('/api/files', fileRouter);
 app.use('/api/convert', conversionRouter);
-
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
-});
+app.use('/api/health', healthRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
