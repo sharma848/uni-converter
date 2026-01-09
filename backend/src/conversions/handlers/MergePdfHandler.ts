@@ -71,7 +71,10 @@ export class MergePdfHandler implements ConversionHandler {
     const pdfBytes = await mergedPdf.save();
     const outputFilename = `merged-pdf-${Date.now()}.pdf`;
     
-    await storage.writeFileChunked(outputFilename, pdfBytes);
+    // Convert Uint8Array to Buffer for file writing
+    const pdfBuffer = Buffer.from(pdfBytes);
+    
+    await storage.writeFileChunked(outputFilename, pdfBuffer);
 
     const stats = await storage.getOutputFileStats(outputFilename);
 

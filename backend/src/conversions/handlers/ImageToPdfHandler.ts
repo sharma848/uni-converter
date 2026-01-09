@@ -105,8 +105,11 @@ export class ImageToPdfHandler implements ConversionHandler {
     const pdfBytes = await pdfDoc.save();
     const outputFilename = `image-to-pdf-${Date.now()}.pdf`;
     
+    // Convert Uint8Array to Buffer for file writing
+    const pdfBuffer = Buffer.from(pdfBytes);
+    
     // Use chunked writing for large files
-    await storage.writeFileChunked(outputFilename, pdfBytes);
+    await storage.writeFileChunked(outputFilename, pdfBuffer);
 
     const stats = await storage.getOutputFileStats(outputFilename);
 
