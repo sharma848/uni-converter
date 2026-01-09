@@ -11,7 +11,7 @@
         "clean:build": "rm -f dist/**/*.map",
         "prestart": "npm run build",
         "start": "node dist/server.js",
-        "start:backend": "node dist/server.js",
+        "start:backend": "npm run build && node dist/server.js",
         "start:prod": "NODE_ENV=production node dist/server.js"
     },
     "keywords": [],
