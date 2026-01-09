@@ -1,0 +1,22 @@
+{
+    "name": "uni-converter-app",
+    "version": "1.0.0",
+    "description": "All-in-one file conversion platform",
+    "private": true,
+    "scripts": {
+        "install:all": "cd backend && NODE_TLS_REJECT_UNAUTHORIZED=0 npm install && cd ../frontend && npm install",
+        "dev:backend": "cd backend && npm run dev",
+        "dev:frontend": "cd frontend && npm run dev",
+        "build:backend": "cd backend && npm run build",
+        "build:frontend": "cd frontend && npm run build",
+        "build:all": "npm run build:backend && npm run build:frontend"
+    },
+    "keywords": [
+        "file-converter",
+        "pdf",
+        "image",
+        "conversion"
+    ],
+    "author": "",
+    "license": "MIT"
+}
