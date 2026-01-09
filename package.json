@@ -14,7 +14,8 @@
         "build:backend:prod": "cd backend && npm run build:prod",
         "build:frontend:prod": "cd frontend && npm run build:prod",
         "build:all:prod": "npm run build:backend:prod && npm run build:frontend:prod",
-        "start:backend": "cd backend && npm run start:backend",
+        "start": "cd backend && npm start",
+        "start:backend": "cd backend && npm start",
         "start:prod": "cd backend && npm run start:prod"
     },
     "keywords": [
